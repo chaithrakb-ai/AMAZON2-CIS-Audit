@@ -315,6 +315,9 @@ amazon2cis_aide_cron:
 amazon2cis_bootloader_password: grub.pbkdf2.sha512.changethispart
 amazon2cis_set_boot_pass: false
 
+# 1.6.1.6 List of unconfined services to accept (e.g. - amazon-ssm-agen)
+amazon2cis_unconfined_services: []
+
 # Warning Banner Content (issue, issue.net, motd)
 amazon2cis_warning_banner: Authorized uses only. All activity may be monitored and reported.
 # End Banner

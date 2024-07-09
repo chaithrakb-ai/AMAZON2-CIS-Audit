@@ -107,7 +107,7 @@ command:
   selinux_unconfined:
     title: 1.6.1.6 | Ensure no unconfined services exist
     exit-status: 1
-    exec: "ps -eZ | grep unconfined_service_t"
+    exec: "ps -eZ | grep unconfined_service_t{{ if .Vars.amazon2cis_unconfined_services }} | grep -v{{ range .Vars.amazon2cis_unconfined_services }} -e {{ . }}{{ end }}{{ end }}"
     stdout: ['!/./']
     meta:
       server: 1
