@@ -1,6 +1,6 @@
 {{ if .Vars.amazon2cis_rule_4_2_1_4 }}
 file:
-  /etc/rsyslog.conf:
+  /etc/rsyslog.conf_logging:
     title: 4.2.1.4 | Ensure logging is configured
     exists: true
     contains:
