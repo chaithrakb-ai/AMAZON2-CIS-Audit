@@ -148,7 +148,7 @@ command:
       CISv8_IG3: true
   {{ end }}
   {{ if .Vars.amazon2cis_rule_3_5_1_7 }}
-  nic_assigned:
+  firewall_drops_check:
     title: 3.5.1.7 | Ensure firewalld drops unnecessary services and ports
     exec:  echo "Warning - Manually check that unneccessary port and services do not have access in conjunction with site policy"
     exit-status: 0
